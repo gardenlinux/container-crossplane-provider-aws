@@ -8,7 +8,7 @@ BASE_IMAGE="${BASE_IMAGE:-ghcr.io/gardenlinux/gardenlinux/fips:1877.22}"
 WORKDIR="${WORKDIR:-./.build/crossplane-provider-aws-fips-build}"
 IMAGE_NAME="${IMAGE_NAME:-gl-fips-crossplane-provider-aws}"
 ARCH="${ARCH:-$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/')}"
-VERSION="${VERSION:-0.59.0}"
+VERSION="${VERSION:-0.60.0}"
 UPSTREAM_GIT_SHA="${UPSTREAM_GIT_SHA:-5829880faaca3d4bcedd6554fd6a90ab4eb0928c}"
 GO_IMAGE="${GO_IMAGE:-golang:1.24-bookworm}"
 
@@ -81,7 +81,7 @@ echo "Built: ${IMAGE_NAME}:${VERSION}-${ARCH}"
 
 # --- SBOM --------------------------------------------------------------------
 # Syft version is pinned; update SYFT_VERSION to pick up a newer release.
-SYFT_VERSION="${SYFT_VERSION:-1.56.0}"
+SYFT_VERSION="${SYFT_VERSION:-0.60.0}"
 SYFT_BIN="${WORKDIR}/syft"
 
 install_syft() {
