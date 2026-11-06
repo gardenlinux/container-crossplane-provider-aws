@@ -10,7 +10,7 @@ IMAGE_NAME="${IMAGE_NAME:-gl-fips-crossplane-provider-aws}"
 ARCH="${ARCH:-$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/')}"
 VERSION="${VERSION:-0.59.0}"
 UPSTREAM_GIT_SHA="${UPSTREAM_GIT_SHA:-5829880faaca3d4bcedd6554fd6a90ab4eb0928c}"
-GO_IMAGE="${GO_IMAGE:-golang:1.23-bookworm}"
+GO_IMAGE="${GO_IMAGE:-golang:1.24-bookworm}"
 
 # --- prerequisites -----------------------------------------------------------
 
